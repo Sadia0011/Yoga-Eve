@@ -28,7 +28,7 @@ const Home = () => {
   },[])
     return (
         <div>
-            <Banner></Banner>
+            <Banner ></Banner>
 
             <div className="text-center my-8">
                 <h2 className="text-lg">WELCOME</h2>

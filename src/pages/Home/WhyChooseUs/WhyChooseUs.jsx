@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import { BsFlower1 } from 'react-icons/bs';
-
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 const WhyChooseUs = () => {
+  useEffect(()=>{
+    Aos.init({duration:2000})
+  },[])
     return (
       <div className="mb-5">
            <div className="text-4xl my-5 flex items-center justify-center">
@@ -15,12 +20,12 @@ const WhyChooseUs = () => {
      
 
  <div className="flex flex-col lg:flex-row justify-between gap-5">
- <div className="w-1/2" >
+ <div className="w-1/2" data-aos="fade-down" >
  <img  className="w-full h-full"
   src="https://i.ibb.co/tq0zz7Y/images-q-tbn-ANd9-Gc-Tqgphdj-NKII4-Jh-Slk-j-EVJ5-E51-P2-FIBvr-Fzg-usqp-CAU.jpg" alt="" />
 
  </div>
-<div className="text-left p-8 text-xl bg-pink-300 w-1/2">
+<div data-aos="fade-up" className="text-left p-8 text-xl bg-pink-300 w-1/2">
 
   <ul className="mb-5">
     <li><span className="font-bold ">Expertise:</span> Our team comprises certified and experienced professionals who are passionate about what they do. Your well-being is our priority.</li>
