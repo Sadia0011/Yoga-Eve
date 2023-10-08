@@ -3,6 +3,7 @@ import "./Navbar.css"
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import {CgProfile} from 'react-icons/cg'
+import {GiFlowerTwirl} from 'react-icons/gi'
 const Navbar = () => {
   const {user,logOut}=useContext(AuthContext)
   const handleLogOut=()=>{
@@ -24,8 +25,12 @@ const Navbar = () => {
              {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">Yoga<span className="bg-pink-600 text-white p-1 rounded">EVE</span></a>
-        </div>
+          <div className="flex  items-center justify-center">
+  <span className="text-pink-600 text-4xl mr-2"><GiFlowerTwirl></GiFlowerTwirl></span>
+  <h2 className="text-center my-3 normal-case text-xl"> Yoga <span className="bg-pink-600 text-white p-1 rounded">EVE</span></h2>
+  
+    </div> 
+       </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {navLinks}
