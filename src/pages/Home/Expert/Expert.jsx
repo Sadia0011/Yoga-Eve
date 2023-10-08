@@ -5,7 +5,7 @@ const Expert = ({expert}) => {
     return (
         <div className='flex flex-col items-center'>
         <div className="avatar">
-            <div className='w-full rounded-full'>
+            <div className=' rounded-full'>
             <img  src={pic} alt="profile-picture" />
             </div>
       

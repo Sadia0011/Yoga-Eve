@@ -4,14 +4,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
-
 import {FcGoogle} from 'react-icons/fc'
+
 const Register = () => {
   const [showPassword,setShowPassword]=useState(false)
   const navigate=useNavigate()
-    const {createUser,googleSignIn}=useContext(AuthContext)
-    const handleLogin=e=>{
+    const {createUser,googleSignIn,profileUpdate}=useContext(AuthContext)
+    const handleLogin=async(e)=>{
         e.preventDefault();
+        const name=e.target.name.value;
         const email=e.target.email.value;
         const password=e.target.password.value;
         console.log(email,password)
@@ -20,21 +21,28 @@ const Register = () => {
           toast("Please provide a stronger password")    
           return;
         }
-
+        
 // sign in user
-createUser(email,password)
-.then(result=>{
-  console.log(result.user)
-toast("Congratulations,registration successful")
-navigate("/")
-})
-        .catch(error=>console.error(error))
+ 
+    const result= await createUser(name, email,password)
+       .then(async (result) => {console.log(result)})
+        .catch((error) => console.log("error from signup", error));
+        
+        toast("Congratulations,registration successful")
+    navigate("/")
+    // })
+ 
+        // catch((error)=>console.error(error))
+        
 
-    }
+    //  await profileUpdate(name)
+    //     .then((result)=>{console.log("profile updated",result.user)})
+    //     .catch(error=>console.error(error))
+      }
     const handleGoogleSignIn=()=>{
       googleSignIn()
       .then(result=>{
-        console.log(result.user)
+        console.log(result)
        toast("Successfully logged in")
        navigate("/")
       })
