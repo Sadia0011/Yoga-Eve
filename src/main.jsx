@@ -10,7 +10,13 @@ import ErrorPage from './ErrorPage/ErrorPage';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
-import Services from './pages/Services/Services';
+import AuthProvider from './AuthProvider/AuthProvider';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
+import ExpertDetails from './pages/Home/Expert/ExpertDetails';
+import ServiceDetails from './pages/Services/ServiceDetails';
+import BlogDetails from './pages/Home/Blog/BlogDetails';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +26,8 @@ const router = createBrowserRouter([
     children:[
       {
         path:"/",
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader:()=>fetch("/services.json")
       },
       {
         path:"/about",
@@ -31,14 +38,36 @@ const router = createBrowserRouter([
         element:<Contact></Contact>
       },
       {
-        path:"/services",
-        element:<Services></Services>
+        path:"/login",
+        element:<Login></Login>
       },
+      {
+        path:"/register",
+        element:<Register></Register>
+      },
+      {
+        path:"/experts/:id",
+        element:<PrivateRoute><ExpertDetails></ExpertDetails></PrivateRoute>,
+        loader:()=>fetch('/Experts.json')
+      },
+      {
+        path:"/service/:id",
+        element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
+        loader:()=>fetch('/services.json')
+      },
+      {
+        path:"/blog/:id",
+        element:<PrivateRoute><BlogDetails></BlogDetails></PrivateRoute>,
+        loader:()=>fetch('/blogs.json')
+      },
+      
     ]
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+   <AuthProvider>
    <RouterProvider router={router} />
+   </AuthProvider>
   </React.StrictMode>,
 )

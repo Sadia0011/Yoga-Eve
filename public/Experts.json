@@ -1,0 +1,36 @@
+ [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "pic": "https://i.ibb.co/swH8ChW/images-q-tbn-ANd9-Gc-Sz-HQv-th9wq3iv-Q1-CVk7-UZRxhb-Pq64o-Qrg5-Q-usqp-CAU.jpg",
+        "degree": "Ph.D. in Yoga Philosophy",
+        "post": "Yoga Instructor",
+        "specialty": "Hatha Yoga, Meditation, Stress Management"
+      },
+      {
+        "id": 2,
+        "name": "Alice Smith",
+        "pic": "https://i.ibb.co/7JwfHDr/images-q-tbn-ANd9-Gc-RBBegc-LD6-Lt8-Esz03-Csi-LMKy-Huj-HWY4y-Lcm-Q-usqp-CAU.jpg",
+        "degree": "Registered Dietitian (RD)",
+        "post": "Nutritionist",
+        "specialty": "Nutritional Counseling, Weight Management, Dietary Planning"
+      },
+      {
+        "id": 3,
+        "name": "Sarah Johnson",
+        "pic": "https://i.ibb.co/7JwfHDr/images-q-tbn-ANd9-Gc-RBBegc-LD6-Lt8-Esz03-Csi-LMKy-Huj-HWY4y-Lcm-Q-usqp-CAU.jpg",
+        "degree": "M.S. in Physical Therapy",
+        "post": "Physical Therapist",
+        "specialty": "Rehabilitation, Sports Injury Recovery, Pain Management"
+      },
+      {
+        "id": 4,
+        "name": "David Williams",
+        "pic": "https://i.ibb.co/swH8ChW/images-q-tbn-ANd9-Gc-Sz-HQv-th9wq3iv-Q1-CVk7-UZRxhb-Pq64o-Qrg5-Q-usqp-CAU.jpg",
+        "degree": "M.D. in Integrative Medicine",
+        "post": "Holistic Health Practitioner",
+        "specialty": "Holistic Healing, Herbal Medicine, Mind-Body Wellness"
+      }
+    ]
+ 
+  
