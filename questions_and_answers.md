@@ -20,8 +20,8 @@ console.log(greetign);
 
 #### Answer: B
 
-<i>Write your explanation here</i>
-spelling mistake greetign .js will not recognized it.
+<i>spelling mistake greetign .js will not recognized it.</i>
+
 </p>
 </details>
 
@@ -45,8 +45,8 @@ sum(1, "2");
 
 #### Answer: C
 
-<i>Write your explanation here</i>
-as "2" is string the sum of them will be 12
+<i>as "2" is string the sum of them will be 12</i>
+
 </p>
 </details>
 
@@ -71,8 +71,8 @@ console.log(food);
 
 #### Answer: A
 
-<i>Write your explanation here</i>
-the change is happening in info.it will not affect food array.so it will remain unchanged.
+<i>the change is happening in info.it will not affect food array.so it will remain unchanged.</i>
+
 </p>
 </details>
 
@@ -96,8 +96,8 @@ console.log(sayHi());
 
 #### Answer: B
 
-<i>Write your explanation here</i>
-the function is expecting an argument,as there is nothing it will show undefined.
+<i>the function is expecting an argument,as there is nothing it will show undefined.</i>
+
 </p>
 </details>
 
@@ -124,7 +124,7 @@ console.log(count);
 
 #### Answer: C
 
-<i>Write your explanation here</i>
-for 1,2,3 the function will run correcty and count also inccreases as 3.
+<i>for 1,2,3 the function will run correcty and count also inccreases as 3.</i>
+
 </p>
 </details>
