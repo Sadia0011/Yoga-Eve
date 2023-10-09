@@ -18,10 +18,10 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
 <i>Write your explanation here</i>
-
+spelling mistake greetign .js will not recognized it.
 </p>
 </details>
 
@@ -43,10 +43,10 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
 <i>Write your explanation here</i>
-
+as "2" is string the sum of them will be 12
 </p>
 </details>
 
@@ -69,10 +69,10 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
 <i>Write your explanation here</i>
-
+the change is happening in info.it will not affect food array.so it will remain unchanged.
 </p>
 </details>
 
@@ -94,10 +94,10 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
 <i>Write your explanation here</i>
-
+the function is expecting an argument,as there is nothing it will show undefined.
 </p>
 </details>
 
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
 <i>Write your explanation here</i>
-
+for 1,2,3 the function will run correcty and count also inccreases as 3.
 </p>
 </details>
