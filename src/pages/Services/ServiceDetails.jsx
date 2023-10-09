@@ -16,19 +16,19 @@ const ServiceDetails = () => {
 
     return (
         <div>
-         <div className="relative flex  flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-  <div className="relative mx-4 mt-4 h-80 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
-    <img src={selectedService.img} className="w-full h-80" alt="profile-picture" />
+         <div className="relative flex  flex-col rounded-xl bg-white ">
+  <div className="relative">
+    <img src={selectedService.img} className="w-1/2 mx-auto" alt="profile-picture" />
   </div>
-  <div className="p-6 text-center">
-    <h4 className="mb-2 block text-pink-600 font-sans text-2xl font-semibold">{selectedService.name}</h4>
-    <p className="block font-medium">TK {selectedService.price}K </p>
-    <p className="block font-medium">{selectedService.description}</p>
+  <div className="p-6 text-center max-w-3xl mx-auto">
+    <h4 className="mb-2 block text-pink-600  text-3xl font-semibold">{selectedService.name}</h4>
+    <p className="block text-2xl font-medium">TK {selectedService.price}</p>
+    <p className="block text-2xl font-medium">{selectedService.description}</p>
   </div>
  
 </div>
 <div className="flex justify-center items-center">
-<button onClick={handleGoBack} className="btn btn-secondary my-5">Go Back</button>
+<button onClick={handleGoBack} className="btn btn-secondary text-white my-5">Go Back</button>
 </div>
        </div>
     );

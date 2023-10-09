@@ -4,10 +4,10 @@ import { Link,  useLocation,  useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
-
+import {FcGoogle} from 'react-icons/fc'
 
 const Login = () => {
-const {signIn}=useContext(AuthContext)
+const {signIn,googleSignIn}=useContext(AuthContext)
 const [showPassword,setShowPassword]=useState(false)
 const navigate=useNavigate()
 const location=useLocation()
@@ -28,10 +28,22 @@ signIn(email,password)
           console.error(error)
         toast.error("email or password don't match.please try again")
         })
-        // google sign in 
+         
 
     }
-
+    // google sign in
+    const handleGoogleSignIn=()=>{
+      googleSignIn()
+      .then(result=>{
+        console.log(result)
+       toast("Successfully logged in")
+       navigate("/")
+      })
+        .catch(error=>{
+          console.error(error)
+        toast.error("email or password don't match.please try again")
+        })
+    }
    
     return (
         <div>
@@ -70,7 +82,8 @@ signIn(email,password)
               </div>
              </form>
             </div>
-            
+            <button onClick={handleGoogleSignIn} className=" text-pink-600 font-semibold flex justify-center items-center gap-2">Login with Google <span className="text-2xl"><FcGoogle></FcGoogle></span></button>
+   
         <p className="p-3 text-center">New here? Please<Link to="/register"><button className="btn btn-link text-pink-600">Register</button></Link></p>
           </div>
         </div>

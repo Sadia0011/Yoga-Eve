@@ -14,12 +14,10 @@ const googleSignIn=()=>{
     setLoading(true)
     return signInWithPopup(auth,googleProvider);
 }
-const createUser=async(name,email,password)=>{
+const createUser=async(profile,email,password)=>{
     setLoading(true)
     await createUserWithEmailAndPassword (auth,email,password);
-    await updateProfile(auth.currentUser,{
-        displayName:name
-       })
+    await updateProfile(auth.currentUser,profile)
        .then((result)=>{console.log("profile updated",result)})
        .catch(error=>console.error(error))
        const username = auth.currentUser;

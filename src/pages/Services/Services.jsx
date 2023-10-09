@@ -11,7 +11,7 @@ const Services = ({services}) => {
         Aos.init({duration:2000})
       },[])
     return (
-       <div>
+       <div className='font-font_Cormorant'>
          <div data-aos="flip-down" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {
                 services.slice(0, showAll ? services.length : 4).map(service=><ServiceCard

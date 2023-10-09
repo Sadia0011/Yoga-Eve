@@ -4,19 +4,25 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
-import {FcGoogle} from 'react-icons/fc'
+
 
 const Register = () => {
   const [showPassword,setShowPassword]=useState(false)
   const navigate=useNavigate()
-    const {createUser,googleSignIn,profileUpdate}=useContext(AuthContext)
+    const {createUser}=useContext(AuthContext)
     const handleLogin=async(e)=>{
         e.preventDefault();
-        const name=e.target.name.value;
+        const displayName=e.target.name.value;
+        const photoURL=e.target.img.value;
         const email=e.target.email.value;
         const password=e.target.password.value;
-        console.log(email,password)
+     
+const profile={
+  displayName: displayName,
+      photoURL: photoURL,
+}
 
+console.log(profile,email,password)
         if(!/(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}|:<>?]).{6,}/.test(password)){
           toast("Please provide a stronger password")    
           return;
@@ -24,33 +30,13 @@ const Register = () => {
         
 // sign in user
  
-    const result= await createUser(name, email,password)
+    const result= await createUser(profile, email,password)
        .then(async (result) => {console.log(result)})
         .catch((error) => console.log("error from signup", error));
-        
         toast("Congratulations,registration successful")
-    navigate("/")
-    // })
- 
-        // catch((error)=>console.error(error))
-        
-
-    //  await profileUpdate(name)
-    //     .then((result)=>{console.log("profile updated",result.user)})
-    //     .catch(error=>console.error(error))
+        navigate("/")
       }
-    const handleGoogleSignIn=()=>{
-      googleSignIn()
-      .then(result=>{
-        console.log(result)
-       toast("Successfully logged in")
-       navigate("/")
-      })
-        .catch(error=>{
-          console.error(error)
-        toast.error("email or password don't match.please try again")
-        })
-    }
+  
     return (
         <div>
         <div className="hero-content flex-col  ">
@@ -68,6 +54,12 @@ const Register = () => {
               </div>
               <div className="form-control">
                 <label className="label">
+                  <span className="label-text">Image</span>
+                </label>
+                <input type="photoURL" name="img"  placeholder="Image" className="border-pink-600 input input-bordered"  />
+              </div>
+              <div className="form-control">
+                <label className="label">
                   <span className="label-text">Email<sup className="text-pink-600">*</sup></span>
                 </label>
                 <input type="email" name="email"  placeholder="email" className="border-pink-600 input input-bordered" required />
@@ -82,7 +74,7 @@ const Register = () => {
                 placeholder="password" 
                 className="border-pink-600 input input-bordered relative" 
                 required />
-                <span className="absolute bottom-52 right-12"><button onClick={()=>setShowPassword(!showPassword)} >
+                <span className="absolute bottom-44 right-12"><button onClick={()=>setShowPassword(!showPassword)} >
 
                   {showPassword ? <AiOutlineEye></AiOutlineEye>:<AiOutlineEyeInvisible></AiOutlineEyeInvisible>}
                 </button></span>
@@ -92,8 +84,7 @@ const Register = () => {
               </div>
               </form>
             </div>
-            <button onClick={handleGoogleSignIn} className=" text-pink-600 font-semibold flex justify-center items-center gap-2">Login with Google <span className="text-2xl"><FcGoogle></FcGoogle></span></button>
-        <p className="p-3 text-center">Already have an account? Please<Link to="/login"><button className="btn btn-link text-pink-600">login</button></Link></p>
+            <p className="p-3 text-center">Already have an account? Please<Link to="/login"><button className="btn btn-link text-pink-600">login</button></Link></p>
           </div>
         </div>
         <ToastContainer />

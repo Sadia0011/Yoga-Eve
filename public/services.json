@@ -3,70 +3,70 @@
         "id": 1,
         "name": "Acupuncture",
         "img": "https://i.ibb.co/1vxtxKj/images-q-tbn-ANd9-Gc-Qose-Cn1170h1-ELyb-Mv-Rk-W5-Vk-Aj-VMWW1-D5e-Hw-usqp-CAU.jpg",
-        "price": 60,
+        "price": 600,
         "description": "Acupuncture is a traditional Chinese healing technique that uses thin needles to stimulate energy flow, alleviate pain, and reduce stress."
       },
       {
         "id": 2,
         "name": "Aromatherapy Massage",
         "img": "https://i.ibb.co/Xz3VKPn/images-q-tbn-ANd9-Gc-Sl6-MKz-KNc-U6bq-Un-MCVsur7x0-ETDTZ-o-Xx3k-Q-usqp-CAU.jpg",
-        "price": 70,
+        "price": 700,
         "description": "Aromatherapy massage combines essential oils with massage to promote relaxation, tension reduction, and mood improvement."
       },
       {
         "id": 3,
         "name": "Deluxe Organic Facial",
         "img": "https://i.ibb.co/xHJHrK1/images-q-tbn-ANd9-Gc-Qw-P1-DWEi-Sb-Rt4-BGhw1-OYk-IG-C4-ns7b-vikw-usqp-CAU.jpg",
-        "price": 80,
+        "price": 800,
         "description": "Our Deluxe Organic Facial rejuvenates your skin with premium organic products, leaving it refreshed and revitalized."
       },
       {
         "id": 4,
         "name": "AstroCrystal Therapy",
         "img": "https://i.ibb.co/ZfqBgNR/images-q-tbn-ANd9-Gc-RYr-Xb-OISi-Be-M-qu-Xsirjfa-LW1-Rg8-EH4z-Nyr-A-usqp-CAU.jpg",
-        "price": 55,
+        "price": 550,
         "description": "AstroCrystal Therapy combines crystals with astrology to promote balance, healing, and harmony in your life."
       },
       {
         "id": 5,
         "name": "Hot Stone Massage",
         "img": "https://i.ibb.co/XpvbtKP/images-q-tbn-ANd9-Gc-Qgz-GI8yz-CIgp-Cep-Nn-6a0p-Sma2-Nmk-N9-UBKdg-usqp-CAU.jpg",
-        "price": 75,
+        "price": 750,
         "description": "Hot Stone Massage uses heated stones to melt tension, soothe sore muscles, and induce deep relaxation."
       },
       {
         "id": 6,
         "name": "Reiki Healing",
         "img": "https://i.ibb.co/hySjdmR/images-q-tbn-ANd9-Gc-RIREoo-Ma1-JZvb5wn-WAWr1j-KOHo-NTO99-IJo-Cg-usqp-CAU.jpg",
-        "price": 50,
+        "price": 500,
         "description": "Reiki promotes relaxation and overall well-being by channeling healing energy through gentle touch."
       },
       {
         "id": 7,
         "name": "Yoga and Meditation Retreat",
         "img": "https://i.ibb.co/mbZ7yvP/images-q-tbn-ANd9-Gc-Tw-Efgri-JIAe-Ks-P9v-LKQKXtrw-Z-FVCf-EXAj8g-usqp-CAU.jpg",
-        "price": 120,
+        "price": 1200,
         "description": "Escape to our Yoga and Meditation Retreat for daily practices, healthy meals, and transformative experiences."
       },
       {
         "id": 8,
         "name": "Chakra Balancing",
         "img": "https://i.ibb.co/RQbTrNm/images-q-tbn-ANd9-Gc-T4-MKHPjpmu-O3-Klyu2u-Jybl9vj-DPm9x-XTISlw-usqp-CAU.jpg",
-        "price": 65,
+        "price": 650,
         "description": "Chakra Balancing aligns and cleanses your energy centers, promoting vitality and emotional well-being."
       },
       {
         "id": 9,
         "name": "Thai Yoga Massage",
         "img": "https://i.ibb.co/ZxynwCk/images-q-tbn-ANd9-Gc-Tz-Jd-XWm-NJ8un8-Te0i-SLb3-Lw-Ce-DATCflvq-ZAg-usqp-CAU.jpg",
-        "price": 70,
+        "price": 700,
         "description": "Thai Yoga Massage combines stretching, acupressure, and yoga-like movements to improve flexibility and relaxation."
       },
       {
         "id": 10,
         "name": "Meditation Classes",
         "img": "https://i.ibb.co/ggGsN93/images-q-tbn-ANd9-Gc-Tn-Vvmu-Tda1-Eiea-Fu-KOO3-Xfqgrsu-Oblqk7rjg-usqp-CAU.jpg",
-        "price": 25,
+        "price": 250,
         "description": "Join our Meditation Classes to experience inner peace and mental clarity through guided meditation techniques."
       }
     ]

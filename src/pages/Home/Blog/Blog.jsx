@@ -8,9 +8,9 @@ const Blog = ({blog}) => {
 
     <img src={img} className='w-full h-[200px]' alt={name}/>
 
-  <div className="p-6">
-    <h4 className="block font-sans text-xl font-semibold">{name}</h4>
-    <p className="mt-3 block font-sans text-base"> {post_description.split(" ").slice(0,20).join(" ")}</p>
+  <div className="p-6 flex-grow">
+    <h4 className="block text-xl font-semibold">{name}</h4>
+    <p className="mt-3 block text-base"> {post_description.split(" ").slice(0,20).join(" ")}</p>
     <div className='flex items-center'>
         <Link to={`/blog/${id}`} className='text-pink-600'>Read more</Link>
         <AiOutlineArrowRight className=' text-xl text-pink-600'></AiOutlineArrowRight>
@@ -26,7 +26,7 @@ const Blog = ({blog}) => {
       />
       
     </div>
-    <p className="block font-sans text-base font-normal leading-relaxed text-inherit antialiased">
+    <p className="block  text-base font-normal ">
       {date}
     </p>
   </div>

@@ -17,7 +17,8 @@ import ExpertDetails from './pages/Home/Expert/ExpertDetails';
 import ServiceDetails from './pages/Services/ServiceDetails';
 import BlogDetails from './pages/Home/Blog/BlogDetails';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
-import Gallary from './pages/Home/Gallary/Gallary';
+import Gallary from './pages/Gallary/Gallary';
+import UserProfile from './pages/UserProfile/UserProfile';
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path:"/gallary",
         element:<PrivateRoute><Gallary></Gallary></PrivateRoute>
+      },
+      {
+        path:"/profile",
+        element:<PrivateRoute><UserProfile></UserProfile></PrivateRoute>
       },
       {
         path:"/experts/:id",

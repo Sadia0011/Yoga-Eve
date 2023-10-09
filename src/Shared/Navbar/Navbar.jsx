@@ -15,9 +15,10 @@ const Navbar = () => {
   }
     const navLinks=<>
     <li id="sidebar"><NavLink  to="/">Home</NavLink></li>
+    {user && <li id="sidebar"><NavLink  to="/gallary">Gallary</NavLink></li>}
+    {user && <li id="sidebar"><NavLink  to="/profile">User Profile</NavLink></li>}
     <li id="sidebar"><NavLink  to="/about">About</NavLink></li>
     <li id="sidebar"><NavLink  to="/contact">Contact</NavLink></li>
-    {user && <li id="sidebar"><NavLink  to="/gallary">Gallary</NavLink></li>}
     </>
     return (
         <div className="navbar bg-base-100">
@@ -46,7 +47,11 @@ const Navbar = () => {
          <><span>{user.displayName ? <h2>{user.displayName}</h2> :"unKnown" }</span>
          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div >
-       <span> {user.photoURL ? <img className="w-10 rounded-full" src={user.photoURL}/> :<CgProfile className="text-4xl"></CgProfile>}</span>
+       <span> {user.photoURL ? <>
+       <div className="avatar">
+       <img className="w-10 rounded-full" src={user.photoURL}/>
+       </div>
+       </> :<CgProfile className="text-4xl"></CgProfile>}</span>
         </div>
       </label>
       <button onClick={handleLogOut} className="btn btn-small bg-pink-600 text-white">Sign Out</button></> :

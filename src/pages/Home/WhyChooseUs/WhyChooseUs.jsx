@@ -25,7 +25,7 @@ const WhyChooseUs = () => {
   src="https://i.ibb.co/tq0zz7Y/images-q-tbn-ANd9-Gc-Tqgphdj-NKII4-Jh-Slk-j-EVJ5-E51-P2-FIBvr-Fzg-usqp-CAU.jpg" alt="" />
 
  </div>
-<div data-aos="fade-up" className="text-left p-8 text-xl bg-pink-300 lg:w-1/2">
+<div data-aos="fade-down" className="text-left p-8 text-xl lg:w-1/2">
 
   <ul className="mb-5">
     <li><span className="font-bold ">Expertise:</span> Our team comprises certified and experienced professionals who are passionate about what they do. Your well-being is our priority.</li>

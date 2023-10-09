@@ -27,7 +27,7 @@ const Home = () => {
     .then(data=>setBlogs(data))
   },[])
     return (
-        <div>
+        <div className="font-font_Cormorant">
             <Banner ></Banner>
 
             <div className="text-center my-8">
