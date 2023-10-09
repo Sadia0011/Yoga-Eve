@@ -5,7 +5,7 @@ const ServiceDetails = () => {
     const ServiceDetails=useLoaderData();
     const {id}=useParams();
     const idInt=parseInt(id)
-//    console.log(allData)
+
    const selectedService=ServiceDetails.find(data=>data.id== idInt)
     console.log(selectedService)
 
