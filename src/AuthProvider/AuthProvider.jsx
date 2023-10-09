@@ -9,11 +9,17 @@ const AuthProvider = ({children}) => {
 const [user,setUser]=useState(null)
 const [loading,setLoading]=useState(true)
 
+const logOut=()=>{
+    setLoading(true)
+    return signOut(auth)
+}
+
 const googleProvider=new GoogleAuthProvider();
 const googleSignIn=()=>{
     setLoading(true)
     return signInWithPopup(auth,googleProvider);
 }
+
 const createUser=async(profile,email,password)=>{
     setLoading(true)
     await createUserWithEmailAndPassword (auth,email,password);
@@ -21,28 +27,19 @@ const createUser=async(profile,email,password)=>{
        .then((result)=>{console.log("profile updated",result)})
        .catch(error=>console.error(error))
        const username = auth.currentUser;
+    
+       logOut()
        setUser({ ...username });
-       return username;
+       return ;
 }
+
 const signIn=(email,password)=>{
     setLoading(true)
    return signInWithEmailAndPassword(auth,email,password)
   
 }
-const logOut=()=>{
-    setLoading(true)
-    return signOut(auth)
-}
-// const profileUpdate=async(name)=>{
-//       updateProfile(auth.currentUser,{displayName:name})
-//     // setLoading(true)
-    
-//     .then((result)=>{console.log("profile updated",result.user)})
-//     .catch(error=>console.error(error))
-//     const username = auth.currentUser;
-//     setUser({ ...username });
-//     return ;
-// }
+
+
 
 useEffect(()=>{
    const unSubscribe= onAuthStateChanged(auth,currentUser=>{
@@ -57,7 +54,6 @@ const AuthInfo={
     createUser,
     signIn,
     googleSignIn,
-    // profileUpdate,
     loading,
     logOut
 }

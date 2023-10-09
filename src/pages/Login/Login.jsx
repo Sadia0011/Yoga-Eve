@@ -22,7 +22,9 @@ signIn(email,password)
 .then(result=>{
   console.log(result.user)
  toast("Successfully logged in")
- navigate(location?.state ? location.state : "/")
+ setTimeout(()=>{
+  navigate(location?.state ? location.state : "/")
+ },2000)
 })
         .catch(error=>{
           console.error(error)
@@ -36,12 +38,15 @@ signIn(email,password)
       googleSignIn()
       .then(result=>{
         console.log(result)
-       toast("Successfully logged in")
-       navigate("/")
+      toast("Successfully logged in")
+      setTimeout(()=>{
+        navigate(location?.state ? location.state : "/")
+       },2000)
       })
         .catch(error=>{
           console.error(error)
         toast.error("email or password don't match.please try again")
+       
         })
     }
    
@@ -69,10 +74,10 @@ signIn(email,password)
                 placeholder="password" 
                 className="border-pink-600 input input-bordered" 
                 required />
-                <span className="absolute bottom-52 right-12"><button onClick={()=>setShowPassword(!showPassword)} >
+                <span className="absolute bottom-52 right-12"><span onClick={()=>setShowPassword(!showPassword)} >
 
 {showPassword ? <AiOutlineEye></AiOutlineEye>:<AiOutlineEyeInvisible></AiOutlineEyeInvisible>}
-</button></span>
+</span></span>
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>

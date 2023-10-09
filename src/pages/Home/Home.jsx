@@ -3,7 +3,7 @@ import Banner from "./Banner";
 import { BsFlower1 } from 'react-icons/bs';
 // import SpecialOffer from "./SpecialOffer";
 // import Healing from "./Healing";
-import Services from "../Services/Services";
+import Services from "./Services/Services";
 import { useLoaderData } from "react-router-dom";
 import Experts from "./Expert/Experts";
 import { useEffect, useState } from "react";
@@ -41,20 +41,7 @@ const Home = () => {
               <h2 className="5xl text-pink-600">..........</h2> 
             </div>
             </div>
-            {/* <SpecialOffer></SpecialOffer>
-
-            <div className="text-4xl my-5 flex items-center justify-center">
-              <h2 className="5xl">..........</h2> 
-              <span> <BsFlower1></BsFlower1></span> 
-              <h2 className="5xl">..........</h2> 
-            </div>
-            <Healing></Healing> */}
-
-{/* <div className="text-4xl my-5 flex items-center justify-center">
-              <h2 className="5xl">..........</h2> 
-              <span> <BsFlower1></BsFlower1></span> 
-              <h2 className="5xl">..........</h2> 
-            </div> */}
+            
             <div className="text-center my-8">
                 <h2 className="text-4xl font-semibold">Our <span className="text-pink-600">Services</span></h2>
                 </div>

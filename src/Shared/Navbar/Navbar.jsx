@@ -5,11 +5,11 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import {CgProfile} from 'react-icons/cg'
 import {GiFlowerTwirl} from 'react-icons/gi'
 const Navbar = () => {
-  const {user,logOut,loading}=useContext(AuthContext)
-  // console.log(user.displayName || " helllo")
-  if(loading){
-    return <span className="loading loading-spinner loading-lg"></span>
-  }
+  const {user,logOut}=useContext(AuthContext)
+  // console.log(user.displayName || " hello")
+  // if(loading){
+  //   return <span className="loading loading-spinner loading-lg"></span>
+  // }
   const handleLogOut=()=>{
     logOut();
   }
@@ -44,7 +44,9 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
          { user ?
-         <><span>{user.displayName ? <h2>{user.displayName}</h2> :"unKnown" }</span>
+         <><span>
+          {user.displayName ? <h2>{user.displayName}</h2> :"unKnown" }
+          </span>
          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div >
        <span> {user.photoURL ? <>

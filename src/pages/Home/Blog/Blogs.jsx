@@ -12,7 +12,7 @@ const Blogs = ({blogs}) => {
         Aos.init({duration:2000})
       },[])
     return (
-        <div>
+        <div className='overflow-hidden'>
              <div className="text-4xl my-5 flex items-center justify-center">
               <h2 className="5xl text-pink-600">..........</h2> 
               <span > <BsFlower1></BsFlower1></span> 
@@ -22,7 +22,9 @@ const Blogs = ({blogs}) => {
                 <h2 className="text-4xl font-semibold">Latest <span className='text-pink-600'>Blog</span> Post</h2>
                 </div>
 
-               <div data-aos="flip-up" className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+               <div 
+               data-aos="flip-down" 
+               className='grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
                {
                     blogs.slice(0, showAll ? blogs.length : 4).map(blog=><Blog key={blog.id} blog={blog}></Blog>)
                 }

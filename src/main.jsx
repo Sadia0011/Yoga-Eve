@@ -14,7 +14,7 @@ import AuthProvider from './AuthProvider/AuthProvider';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import ExpertDetails from './pages/Home/Expert/ExpertDetails';
-import ServiceDetails from './pages/Services/ServiceDetails';
+import ServiceDetails from './pages/Home/Services/ServiceDetails';
 import BlogDetails from './pages/Home/Blog/BlogDetails';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Gallary from './pages/Gallary/Gallary';
